@@ -193,10 +193,10 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 			<body>
 				<div class="container">
 				    <header>
-				      <img src='https://ik.imagekit.io/d3kzbpbila/webdev_Z0TfmeIWE.png?updatedAt=1687367732190' alt="">
+				      <img src='https://ik.imagekit.io/d3kzbpbila/1688014993039_-b5_1kWCl.jpg?updatedAt=1688017140508' alt="">
 				    </header>
 				    <div class="content">
-				    	<h1 class="headline" >Thank you for registering for the workshop: Kickstart Web Dev</h1>
+				    	<h1 class="headline" >Thank you for registering for the workshop: Kickstart Javascript for beginners</h1>
 			    		<h2><strong>Join Workshop:</strong></h2>
 			    		<ul>
 				          <li>Google Meet :- Meeting link will be shared one day before the workshop in Mail Inbox and Whatsapp Group</li>
@@ -204,28 +204,29 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 				        </ul>
 				    	<h2><strong>Workshop Details:</strong></h2>
 				    	<ul>
-					        <li><strong>Description:</strong> Gain knowledge about how websites work and the basics of HTML & CSS.</li>
-					        <li><strong>Date and Time:</strong> 28/6 Wednesday (Evening:7pm - 9pm), 29/6 Thursday (Evening:7pm - 9pm)</li>
+					        <li><strong>Description:</strong> Gain knowledge about the importance of JavaScript in development field then the basics and intermediate level of Javascript.</li>
+					        <li><strong>Date and Time:</strong> 1/7 Saturday (Evening:7pm - 9pm), 2/7 Sunday (Evening:7pm - 9pm)</li>
 					        <li><strong>Duration:</strong> 2 Days</li>
 					        <li><strong>Topics to be Covered:</strong></li>
 					        <ul>
 					        	<li>
-					        		Day 1:- (28/6 Wednesday)
+					        		Day 1:- (1/7 Saturday)
 					        		<ol>
 					        			<li>Introduction and Workshop Overview</li>
-					        			<li>Networking Fundamentals</li>					        			
-					        			<li>Basic HTML</li>
-					        			<li>Introduction to CSS</li>
+					        			<li>JavaScript Basics & Fundamentals</li>					        			
+					        			<li>Control flow</li>
+					        			<li>Javascript DOM</li>
 					        			<li>Q&A Session</li>
 					        		</ol>
 					        	</li>
 					        	<li>
-					        		Day 2:- (29/6 Thursday)
+					        		Day 2:- (2/7 Sunday)
 					        		<ol>
 					        			<li>Recap of Day 1/li>
-					        			<li>Enhancing Webpages with CSS</li>					        			
+					        			<li>Javascript functions</li>					        			
+					        			<li>Event Handling</li>
+					        			<li>Intro to js frameworks</li>
 					        			<li>Simple project</li>
-					        			<li>Recap and Next Steps</li>
 					        			<li>Q&A Session</li>
 					        		</ol>
 					        	</li>
@@ -236,8 +237,8 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 					    </ul>
 					    <h2><strong>Requirements:</strong></h2>
 				    	<ol>
-				    		<li>A PC with text editor (visual studio, sublime etc.) for practical sessions</li>
-				    		<li>2 hours of free time</li>
+				    		<li>A PC with any text editor (visual studio, sublime etc.) for practical sessions</li>
+				    		<li>Basic knowledge of HTML</li>
 				    	</ol>
 				    </div>
 				</div>

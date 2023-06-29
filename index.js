@@ -19,19 +19,19 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-let title = 'Kickstart Web Dev';
-let description = "Gain knowledge about how websites work and the basics of HTML & CSS.";
-let image = 'https://ik.imagekit.io/d3kzbpbila/webdev_Z0TfmeIWE.png?updatedAt=1687367732190';
-let startsAt = '28-6-23 (Wednesday)';
+let title = 'Kickstart JavaScript for beginners';
+let description = "Gain knowledge about the importance of JavaScript in development field then the basics and intermediate level of Javascript.";
+let image = 'https://ik.imagekit.io/d3kzbpbila/1688014993039_-b5_1kWCl.jpg?updatedAt=1688017140508';
+let startsAt = '1-7-23 (Saturday)';
 let duration = '2 Days';
 let datesAndTimings = [
-	'28/6 Wednesday (Evening:7pm - 9pm)',
-	'29/6 Thursday (Evening:7pm - 9pm)'
+	'1/7 Saturday (Evening:7pm - 9pm)',
+	'2/7 Sunday (Evening:7pm - 9pm)'
 ]
 const workshopStructure = [
   {
     day: "Day 1",
-    date: "29/6 Wednesday",
+    date: "1/7 Saturday",
     time: "Evening: 7pm-9pm",
     sessions: [
       {
@@ -44,12 +44,11 @@ const workshopStructure = [
       },
       {
         sessionNumber: 2,
-        title: "Networking Fundamentals",
-        duration: "30 mins",
+        title: "Javascript Basics",
+        duration: "40 mins",
         topics: [
-          "Understanding IP addresses, DNS, and their role in network communication.",
-          "Exploring website structure, including frontend, backend, and database components.",
-          "Overview of client-server architecture and the request-response cycle."
+          "Introduction to Javascript and its role in development field.",
+          "Syntax, variables,data types and operators in Javascript.",
         ]
       },
       {
@@ -59,63 +58,73 @@ const workshopStructure = [
       },
       {
         sessionNumber: 4,
-        title: "Basic HTML",
-        duration: "60 mins",
+        title: "Control Flow",
+        duration: "30 mins",
         topics: [
-          "Basic structure of an HTML document.",
-          "Understanding HTML tags, elements, and attributes.",
-          "Hands-on exercises to create a simple HTML webpage."
+          "Conditional Statements (if/else,switch) and loops(for,while) in js."
         ]
       },
       {
         sessionNumber: 5,
-        title: "Introduction to CSS",
-        duration: "10 mins",
+        title: "Introduction to DOM",
+        duration: "30 mins",
         topics: [
-          "Introduction to CSS (Cascading Style Sheets) and its role in webpage styling."
+          "Introduction to DOM.",
+          "Selecting and modifying HTML elements using js",
+          "Hands on exercises to practice control flow concepts and DOM"
         ]
       },
       {
         sessionNumber: 6,
         title: "Q&A Session",
-        duration: "10 mins"
+        duration: "5 mins"
       }
     ]
   },
   {
     day: "Day 2",
-    date: "29/6 Thursday",
+    date: "2/7 Sunday",
     time: "Evening: 7pm-9pm",
     sessions: [
       {
         sessionNumber: 1,
         title: "Recap of Day 1",
-        duration: "5 mins"
+        duration: "5 mins",
+        topics: [
+          "Summary of Javascript basics, control flow, and DOM manipulation covered on first day."
+        ]
       },
       {
         sessionNumber: 2,
-        title: "Enhancing Webpages with CSS",
-        duration: "80 mins",
+        title: "Javascript functions",
+        duration: "30 mins",
         topics: [
-          "Overview of CSS selectors and properties.",
-          "Hands-on exercises to style the previously created HTML webpage with CSS.",
-          "Applying CSS layout techniques (e.g., box model, positioning, flexbox) to create responsive designs.",
-          "Exploring CSS transitions and animations to add interactivity and visual appeal.",
-          "Responsive Web Design",
-          "Introduction to CSS frameworks and libraries for faster development."
+          "Introduction to functions in JavaScript.",
+          "Function declaration, parameters, return statements, and function invocation.",
+          "Hands-on exercises to practice writing and using functions.",
         ]
       },
       {
         sessionNumber: 3,
-        title: "Simple project",
-        duration: "25 mins",
+        title: "Break",
+        duration: "5 mins",
         topics: [
-          "Follow up & Build"
+          "Recap of functions in JavaScript.",
         ]
       },
       {
         sessionNumber: 4,
-        title: "Recap and Next Steps",
+        title: "Event Handling",
+        duration: "45 mins",
+        topics: [
+          "Understanding events and event-driven programming.",
+          "Handling events in JavaScript using event listeners.",
+          "Hands-on exercises to practice event handling and creating interactive web pages."
+        ]
+      },
+      {
+        sessionNumber: 5,
+        title: "Break",
         duration: "10 mins",
         topics: [
           "Recap of key concepts covered in the workshop.",
@@ -123,28 +132,33 @@ const workshopStructure = [
         ]
       },
       {
-        sessionNumber: 5,
-        title: "Q&A Session",
-        duration: "15 mins"
-      }
+        sessionNumber: 6,
+        title: "Introduction to JavaScript Libraries and Frameworks",
+        duration: "15 mins",
+        topics:[
+          "Overview of popular JavaScript libraries and frameworks (e.g., React, Angular, Vue.js).",
+          "Discussing the benefits and use cases of using JavaScript libraries and frameworks."
+        ]
+      },
+      {
+        sessionNumber: 7,
+        title: "Resources for Simple Project that combines JavaScript, DOM manipulation, and event handling.",
+        duration: "5 mins",
+      },
+      {
+        sessionNumber: 8,
+        title: "Q&A session",
+        duration: "5 mins",
+      },
+
     ]
   }
 ];
+const meetingLink = 'https://meet.google.com/wjp-mjka-cwd'
 
-const temp = [
-  {
-    check:'Hello',
-    description:'Desc'
-  },
-  {
-    check:'Hello',
-    description:'Desc'
-  }
-]
-
-// const {data} = axios.post('http://localhost:3333/api/auth/createWorkshop',{
-// 	title,description,image,startsAt,duration,datesAndTimings,learn:workshopStructure
-// })
+const {data} = axios.post('http://localhost:3333/api/auth/createWorkshop',{
+	title,description,image,startsAt,duration,datesAndTimings,learn:workshopStructure,meetingLink
+})
 
 // let mailOptions = {
 //   from: 'tnsacademy1@gmail.com',

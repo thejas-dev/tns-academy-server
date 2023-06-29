@@ -39,7 +39,7 @@ const workshopSchema =  new mongoose.Schema({
 		type:Array,
 		default:[
 			'A laptop with sublime text or any text editors',
-			'2 hours free time'
+			'Basic knowledge of HTML'
 		]
 	},
 	learn:{
