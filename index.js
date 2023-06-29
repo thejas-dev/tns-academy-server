@@ -156,9 +156,9 @@ const workshopStructure = [
 ];
 const meetingLink = 'https://meet.google.com/wjp-mjka-cwd'
 
-const {data} = axios.post('http://localhost:3333/api/auth/createWorkshop',{
-	title,description,image,startsAt,duration,datesAndTimings,learn:workshopStructure,meetingLink
-})
+// const {data} = axios.post('http://localhost:3333/api/auth/createWorkshop',{
+// 	title,description,image,startsAt,duration,datesAndTimings,learn:workshopStructure,meetingLink
+// })
 
 // let mailOptions = {
 //   from: 'tnsacademy1@gmail.com',
