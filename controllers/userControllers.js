@@ -233,7 +233,7 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 						    </ul>
 					        
 					        <h2>For more information visit our website</h2>
-					        <a href="https://tnsacademy.vercel.app/#workshops"><button class="button">TNS-ACADEMY</button></a>
+					        <a href="https://tnsacademy.vercel.app"><button class="button">TNS-ACADEMY</button></a>
 					    </ul>
 					    <h2><strong>Requirements:</strong></h2>
 				    	<ol>
