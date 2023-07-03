@@ -13,6 +13,22 @@ let transporter = nodemailer.createTransport({
   }
 });
 
+
+module.exports.updateCertificates = async(req,res,next) => {
+	try{
+		const {certificates} = req.body;
+		const id = req.params.id;
+		const user = User.findByIdAndUpdate(id,{
+			certificates
+		},{new:true},(err,obj)=>{
+			console.log(obj)
+			return res.json({status:true,obj})
+		})
+	}catch(ex){
+		next(ex)
+	}
+}
+
 module.exports.register = async(req,res,next)=>{
 	try{
 		const {email,name,image,level} = req.body;

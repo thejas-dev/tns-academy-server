@@ -55,5 +55,15 @@ module.exports.updateWorkshop = async(req,res,next) => {
 }
 
 
+module.exports.getWorkshop = async(req,res,next) => {
+	try{
+		const id = req.params.id;
+		console.log(id)
+		const obj = await Workshop.find({_id:id});
+		return res.json({status:true,obj});
 
 
+	}catch(e){
+		next(e)
+	}
+}

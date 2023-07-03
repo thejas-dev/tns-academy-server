@@ -12,6 +12,10 @@ const userSchema =  new mongoose.Schema({
 		required: true,
 		max:40,
 	},
+	certificates:{
+		type:Object,
+		default:{}
+	},
 	email: {
 		type:String,
 		default:'',
