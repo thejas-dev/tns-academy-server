@@ -364,7 +364,10 @@ const sendMail = async (name,email) => {
 
 // sendMail('Thejas hari','thejaskala308@gmail.com')
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://tnsacademy.vercel.app', 
+  credentials: true,
+}));
 app.use(express.json());
 
 app.use('/api/auth',userRoutes);
