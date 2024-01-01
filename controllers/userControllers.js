@@ -13,6 +13,187 @@ let transporter = nodemailer.createTransport({
   }
 });
 
+const sendCourseCompletedMail = (name,email) => {
+	let mailOptions = {
+    from: {
+      name:'TNS Academy',
+      address:'tnsacademy1@gmail.com'
+    },
+    to: 'tnsacademy1@gmail.com',
+    subject: `Course completed by ${name}`,
+    html: `
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <title>TNS-ACADEMY</title>
+    </head>
+
+    <body>
+      <div class="container">
+        <header>
+          <img src="https://ik.imagekit.io/d3kzbpbila/1687633138572_d14Nsb3Of.jpg?updatedAt=1687633153135" alt="">
+        </header>
+        <div class="content">
+          <h1 class="headline" >Name:- ${name}!</h1>
+          <h1 class="headline" >Email:- ${email}!</h1>
+          
+          <p>Best Regards,<br>Thejas hari<br>TNS-ACADEMY Team</p>
+        </div>
+      </div>
+    </body>
+    <style type="text/css">
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      header img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-family: Verdana;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-top: 20px;
+        font-family: Calibri;
+      }
+
+      p {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        font-family: Cambria
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 2px 10px;
+        margin-left: 6px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #0056b3;
+      }
+      .headline {
+        font-size: 24px;
+        background: linear-gradient(to right, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: bolder;
+      }
+
+
+
+    </style>
+    </html>
+    `
+  };
+  transporter.sendMail(mailOptions, function(err, data) {
+    if (err) {
+      console.log("Error " + err);
+    } else {
+      console.log("Email sent successfully");
+    }
+  });
+}
+
+module.exports.courseCompletedRoute = async(req,res,next) => {
+	try{
+		const {userName,email} = req.body;
+		console.log(userName,email)
+		sendCourseCompletedMail(userName,email);
+		return res.json({status:true,msg:"Okay!"});
+	}catch(ex){
+		next(ex)
+	}
+}
+
+module.exports.updateImage = async(req,res,next) => {
+	try{
+		const {id} = req.params;
+		const {image} = req.body;
+		const user = User.findByIdAndUpdate(id,{
+			image
+		},{new:true},(err,obj)=>{
+			if(err){
+				return res.json({status:false,msg:"Something went wrong!"})
+			}
+			return res.json({status:true,user:obj});
+		})
+	}catch(ex){
+		next(ex)
+	}
+}
+
+module.exports.enrollCourse = async(req,res,next) => {
+	try{
+		const {id} = req.params;
+		const {enrolledCoursesId,enrolledCoursesData,key} = req.body
+		if(key === 'B2hkk90amFQZd3cpTeidd2qmav+DYVjRTg43u6YZ1KU='){
+			const user = User.findByIdAndUpdate(id,{
+				enrolledCoursesId,enrolledCoursesData
+			},{new:true},(err,obj)=>{
+				if(err){
+					return res.json({status:false,msg:'Something went wrong!'})
+				}
+				return res.json({status:true,user:obj});
+			})
+		}else{
+			return res.json({status:false,msg:'Something went wrong! Ivalid Key'});
+		}
+	}catch(ex){
+		next(ex)
+	}
+}
+
+module.exports.updateUserCourses = async(req,res,next) => {
+	try{
+		const {id} = req.params;
+		const {enrolledCoursesData,key} = req.body;
+		if(key === 'B2hkk90amFQZd3cpTeidd2qmav+DYVjRTg43u6YZ1KU='){
+			const user = User.findByIdAndUpdate(id,{
+				enrolledCoursesData
+			},{new:true},(err,obj)=>{
+				if(err){
+					return res.json({status:false,msg:"Something went wrong!"});
+				}
+				return res.json({status:true,user:obj})
+			})
+		}else{
+			return res.json({status:false,msg:"Something went wrong!"})
+		}
+	}catch(ex){
+		next(ex)
+	}
+}
 
 module.exports.updateCertificates = async(req,res,next) => {
 	try{
@@ -355,3 +536,4 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 		next(ex)
 	}
 }
+

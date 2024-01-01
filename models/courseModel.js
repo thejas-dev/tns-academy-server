@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose')
 
-const workshopSchema =  new mongoose.Schema({
+const courseSchema =  new mongoose.Schema({
 	title:{
 		type: String,
 		min:3,
@@ -15,19 +15,7 @@ const workshopSchema =  new mongoose.Schema({
 		type:String,
 		default:'',
 	},
-	startsAt:{
-		type:String,
-		default:'',
-	},
-	duration:{
-		type:String,
-		default:'',
-	},
-	registeredParticipants:{
-		type:Array,
-		default:[]
-	},
-	datesAndTimings:{
+	content:{
 		type:Array,
 		default:[]
 	},
@@ -37,28 +25,13 @@ const workshopSchema =  new mongoose.Schema({
 	},
 	requirements:{
 		type:Array,
-		default:[
-			'A laptop with sublime text or any text editors',
-			'Basic knowledge of HTML'
-		]
-	},
-	learn:{
-		type:Array,
 		default:[]
 	},
-	joinForFree:{
-		type:Boolean,
-		default:true
-	},
-	price:{
-		type:String,
-		default:''
-	},
-	workshopBy:{
+	author:{
 		type:String,
 		default:'N.U.Thejas hari'
 	},
-	workshopByInsta:{
+	authorInsta:{
 		type:String,
 		default:'https://www.instagram.com/nuthejashari/'
 	},
@@ -73,6 +46,34 @@ const workshopSchema =  new mongoose.Schema({
 	recordedVideo:{
 		type:String,
 		default:''
+	},
+	courseId:{
+		type:String,
+		required:true
+	},
+	locked:{
+		type:Boolean,
+		default:false
+	},
+	videos:{
+		type:String,
+		default:'0'
+	},
+	projects:{
+		type:String,
+		default:'0'
+	},
+	duration:{
+		type:String,
+		default:'1 Hour'
+	},
+	paid:{
+		type:String,
+		default:''
+	},
+	cancellable:{
+		type:Boolean,
+		default:false
 	}
 	},
 	{
@@ -80,4 +81,4 @@ const workshopSchema =  new mongoose.Schema({
 	}
 )
 
-module.exports = mongoose.model("Workshop",workshopSchema)
+module.exports = mongoose.model("Course",courseSchema)

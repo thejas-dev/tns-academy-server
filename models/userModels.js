@@ -34,6 +34,14 @@ const userSchema =  new mongoose.Schema({
 	registeredWorkshops:{
 		type:Array,
 		default:[]
+	},
+	enrolledCoursesId:{
+		type:Array,
+		default:[]
+	},
+	enrolledCoursesData:{
+		type:Array,
+		default:[]
 	}
 	},
 	{
