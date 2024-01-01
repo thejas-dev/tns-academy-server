@@ -8,7 +8,7 @@
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Thejas hari",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
