@@ -363,9 +363,9 @@ const sendMail = async (name,email) => {
 } 
 
 // sendMail('Thejas hari','thejaskala308@gmail.com')
-
+// app.use(cors())
 app.use(cors({
-  origin: 'https://tnsacademy.vercel.app', 
+  origin: ['http://tnsacademy.vercel.app','https://21stskills.vercel.app'], 
   credentials: true,
 }));
 app.use(express.json());
@@ -381,7 +381,7 @@ mongoose.connect("mongodb+srv://thejashari:letmegoin@tns-academy.oc6yct8.mongodb
 	console.log(err,'DB not connected');
 });
 
-let PORT = process.env.PORT || 3333;
+let PORT = process.env.PORT || 3334;
 
 app.get('/',(req,res)=>{
 	res.send(`<h1>Hello</h1>`)

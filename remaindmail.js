@@ -27,7 +27,7 @@ let transporter = nodemailer.createTransport({
 
 const temp = [
 
-{name:'thejas hari',email:'thejaskala308@gmail.com'}
+{name:'Logesh rav',email:'logiravi15@gmail.com'}
 
 
 ]
@@ -43,104 +43,98 @@ const sendMail = async (name,email) => {
         address:'tnsacademy1@gmail.com'
       },
       to: email,
-      subject: `Thank You for Attending Day 1 of the Kickstart Web Dev Workshop!`,
+      subject: `Congratulations, ${name}, on completing the course.`,
       html: `
        <!DOCTYPE html>
-		<html>
-		<head>
-		    <title>Thank You for Attending Day 1 of the Kickstart Web Dev Workshop!</title>
-		    <style>
-		        body {
-		            font-family: Arial, sans-serif;
-		            line-height: 1.5;
-		            color: #333333;
-		            margin: 0;
-		            padding: 0;
-		        }
+				<html lang="en">
+				<head>
+				  <meta charset="UTF-8">
+				  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				  <title>Congratulations on Completing the Course!</title>
+				  <style>
+				    body {
+				      font-family: Arial, sans-serif;
+				      background-color: #f4f4f4;
+				      margin: 0;
+				      padding: 0;
+				    }
 
-		        .container {
-		            max-width: 600px;
-		            margin: 0 auto;
-		            padding: 20px;
-		        }
+				    .container {
+				      max-width: 600px;
+				      margin: 20px auto;
+				      background-color: #fff;
+				      padding: 20px;
+				      border-radius: 10px;
+				      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				    }
 
-		        h1 {
-		            color: #007bff;
-		            margin-top: 0;
-		        }
+				    h1 {
+				      color: #3498db;
+				    }
 
-		        p {
-		            margin-bottom: 20px;
-		        }
+				    p {
+				      color: #555;
+				    }
 
-		        .button {
-		            display: inline-block;
-		            background-color: #007bff;
-		            color: #ffffff;
-		            text-decoration: none;
-		            padding: 10px 20px;
-		            border-radius: 4px;
-		            margin-top: 10px;
-		        }
+				    .button {
+				      display: inline-block;
+				      padding: 10px 20px;
+				      background-color: #3498db;
+				      color: #fff;
+				      text-decoration: none;
+				      border-radius: 5px;
+				    }
 
-		        .footer {
-		            background-color: #f5f5f5;
-		            padding: 10px;
-		            text-align: center;
-		        }
+				    .certificate-section {
+				      margin-top: 20px;
+				    }
 
-		        .footer p {
-		            margin-bottom: 0;
-		        }
-		        header {
-		            text-align: center;
-		            margin-bottom: 20px;
-		          }
+				    .certificate-image {
+				      max-width: 100%;
+				      height: auto;
+				    }
 
-		          header img {
-		            max-width: 100%;
-		            height: auto;
-		            border-radius: 15px;
-		          }
-		    </style>
-		</head>
-		<body>
-		    <div class="container">
-		        <h1>Thank You for Attending Day 1 of the Kickstart Web Dev Workshop!</h1>
-		        
-		        <p>Hello ${name}, We hope this email finds you well. We wanted to extend our heartfelt thanks for attending Day 1 of the Kickstart Web Dev workshop. It was a pleasure having you as part of the learning journey.</p>
+				    .download-link {
+				      display: block;
+				      margin-top: 20px;
+				      text-align: center;
+				    }
 
-		        <p>Firstly, we would like to provide you with the Day 1 workshop resources for your reference and practice. You can download the resources through the following link: <a href="https://ik.imagekit.io/d3kzbpbila/Pdfs/Kickstart_Web_Dev__1__rNjZlOCJO.pdf" class="button" download>Download</a>.<br><br>These materials will be valuable for reviewing the concepts covered and reinforcing your understanding.</p>
+				    .download-button {
+				      display: inline-block;
+				      padding: 10px 20px;
+				      background-color: #27ae60;
+				      color: #fff;
+				      text-decoration: none;
+				      border-radius: 5px;
+				    }
+				  </style>
+				</head>
+				<body>
+				  <div class="container">
+				    <h1>Congratulations ${name}!</h1>
+				    <p>You've successfully completed the Basics of Networking and HTML course. We applaud your dedication and effort in mastering these fundamental concepts.</p>
+				    <p>Here are some highlights from the course:</p>
+				    <ul>
+				      <li>Understanding Web Development Scopes</li>
+				      <li>Exploring Frontend, Backend, and Database Architecture</li>
+				      <li>Mastering IP Types and DNS</li>
+				      <li>Building a strong foundation in HTML</li>
+				    </ul>
+				    <p>We're pleased to present you with a certificate of completion. Below is your certificate:</p>
+				     <div class="certificate-section">
+				      <img src="https://ik.imagekit.io/d3kzbpbila/thejashari_gbOLYBp4g" alt="Certificate of Completion" class="certificate-image">
+				    </div>
+				    <div class="download-link">
+				      <a href="https://ik.imagekit.io/d3kzbpbila/thejashari_gbOLYBp4g" class="download-button" download>Download Certificate</a>
+				    </div>
+				    <p>We hope you found the course enriching and valuable for your learning journey. Stay tuned for more exciting courses in the future!</p>
+				    <p>Best regards,<br>TNS Academy</p>
+				    <a href="https://tnsacademy.vercel.app" class="button">Explore More Courses</a>
+				  </div>
+				</body>
+				</html>
 
-		        <p>We're excited to inform you that Day 2 of the workshop is scheduled for tomorrow, 29-6-2023, from 7pm to 9pm. We have an engaging agenda planned, which includes the following topics:</p>
-
-		        <ul>
-		            <li>Recap of Day 1 :- We will briefly review the key concepts covered in Day 1 to ensure everyone is on the same page.</li>
-		            <li>Enhancing Webpages with CSS :-  Dive deeper into CSS and explore various techniques to style and enhance webpages.</li>
-		            <li>Simple Project :- Apply your newfound CSS skills to a simple project. This hands-on activity will allow you to practice what you've learned and create an interactive and visually appealing webpage.</li>
-		            <li>Recap and Next Steps :- Summarize the key takeaways from the workshop and provide additional resources and suggestions for further learning and practice.</li>
-		            <li>Q&A Session :-  Engage in a live Q&A session where you can ask any questions related to the workshop content or web development in general. Our instructors will be there to provide guidance and clarification</li>
-		        </ul>
-
-		        <p>We encourage you to come prepared with any questions or doubts you may have from Day 1. Remember, active participation is key to enhancing your learning experience.</p>
-
-		        <p>We look forward to seeing you tomorrow for Day 2 of the workshop. Be sure to mark your calendar and join us at 7pm. We're confident that it will be another insightful and engaging session.</p>
-
-		        <p>If you have any questions or need any assistance before the workshop, please feel free to reach out to our team. We are here to support you every step of the way.</p>
-
-		        <p>Once again, thank you for your participation and enthusiasm. We appreciate your dedication to expanding your web development skills and look forward to continuing this learning journey together.</p>
-		        <header>
-		            <img src="https://ik.imagekit.io/d3kzbpbila/webdev_Z0TfmeIWE.png?updatedAt=1687367732190" alt="Banner Image">
-		          </header>
-		        <div class="footer">
-		            <p>Best regards,</p>
-		            <p>Thejas hari<br>TNS Academy</p>
-		            <p><a href="https://tnsacademy.vercel.app">https://tnsacademy.vercel.app</a></p>
-		        </div>
-		        <p><em>Note: This email is intended for registered participants of the Kickstart Web Dev workshop. If you have received this email by mistake, please let us know by replying to this email.</em></p>
-		    </div>
-		</body>
-		</html>
 
 
       `
