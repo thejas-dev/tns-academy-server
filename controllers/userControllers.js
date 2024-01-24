@@ -27,7 +27,7 @@ const sendCourseCompletedMail = (name,email) => {
 
     <head>
       <meta charset="UTF-8">
-      <title>TNS-ACADEMY</title>
+      <title>21st Skills</title>
     </head>
 
     <body>
@@ -39,7 +39,7 @@ const sendCourseCompletedMail = (name,email) => {
           <h1 class="headline" >Name:- ${name}!</h1>
           <h1 class="headline" >Email:- ${email}!</h1>
           
-          <p>Best Regards,<br>Thejas hari<br>TNS-ACADEMY Team</p>
+          <p>Best Regards,<br>Thejas hari<br>21st Skills Team</p>
         </div>
       </div>
     </body>
@@ -218,18 +218,18 @@ module.exports.register = async(req,res,next)=>{
 		})
 		let mailOptions = {
 	      from: {
-	        name:'TNS Academy',
+	        name:'21st Skills',
 	        address:'tnsacademy1@gmail.com'
 	      },
 	      to: email,
-	      subject: `Welcome To TNS-ACADEMY`,
+	      subject: `Welcome To 21st Skills`,
 	      html: `
 	      <!DOCTYPE html>
 	      <html lang="en">
 
 	      <head>
 	        <meta charset="UTF-8">
-	        <title>TNS-ACADEMY</title>
+	        <title>21st Skills</title>
 	      </head>
 
 	      <body>
@@ -241,7 +241,7 @@ module.exports.register = async(req,res,next)=>{
 	            <h1 class="headline" >Greetings ${name}!</h1>
 	            <p>We are delighted to have you join our vibrant web development community. Get ready to embark on an exhilarating journey of learning, growth, and innovation.</p>
 
-	            <p>At TNS-ACADEMY, our mission is to empower passionate developers like you to excel in the dynamic world of web development. Whether you are a beginner seeking to master the basics, an experienced coder aiming to polish your skills, or interested in exploring hardware development, we offer a diverse range of resources tailored to meet your unique needs.</p>
+	            <p>At 21st Skills, our mission is to empower passionate developers like you to excel in the dynamic world of web development. Whether you are a beginner seeking to master the basics, an experienced coder aiming to polish your skills, or interested in exploring hardware development, we offer a diverse range of resources tailored to meet your unique needs.</p>
 
 	            <p>Here's what you can expect as a valued member of our academy:</p>
 
@@ -257,15 +257,15 @@ module.exports.register = async(req,res,next)=>{
 	            <h2>Hardware Development</h2>
 	            <p>Explore the fascinating world of hardware development with our dedicated resources on Arduino, NodeMCU, ESP32, and more. Learn how to build and program your own smart devices, Internet of Things (IoT) projects, and unleash your creativity in physical computing.</p>
 
-	            <p>We continuously update our platform with fresh content, industry insights, and practical exercises to ensure you stay ahead in the rapidly evolving web development and hardware domains. Explore the latest resources and stay informed about upcoming events by visiting our website at <a class="button" href="https://tnsacademy.vercel.app/#workshops">TNS-Academy</a>.</p>
+	            <p>We continuously update our platform with fresh content, industry insights, and practical exercises to ensure you stay ahead in the rapidly evolving web development and hardware domains. Explore the latest resources and stay informed about upcoming events by visiting our website at <a class="button" href="https://21skills.vercel.app/#workshops">21st Skills</a>.</p>
 
 	            <p>Should you have any questions, require assistance, or simply want to connect,we are here to assist you every step of the way.</p>
 
-	            <p>Once again, welcome to TNS-ACADEMY ${name}! Know your true potential and embark on a transformative journey to elevate your skills and delve into the exciting realm of hardware development.</p>
+	            <p>Once again, welcome to 21st Skill ${name}! Know your true potential and embark on a transformative journey to elevate your skills and delve into the exciting realm of hardware development.</p>
 
 	            <p>Happy coding and creating!</p>
 
-	            <p>Best Regards,<br>Thejas hari<br>TNS-ACADEMY Team</p>
+	            <p>Best Regards,<br>Thejas hari<br>21st Skills Team</p>
 	          </div>
 	        </div>
 	      </body>
@@ -374,7 +374,7 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 		const {registeredWorkshops,currentWorkshop,email} = req.body;
 		let mailOptions = {
 		  from: {
-	        name:'TNS Academy',
+	        name:'21st Skills',
 	        address:'tnsacademy1@gmail.com'
 	      },
 		  to: email,
@@ -384,16 +384,16 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 			<html>
 			<head>
 				<meta charset="UTF-8">
-			  	<title>Welcome to TNS-ACADEMY</title>
+			  	<title>Welcome to 21st Skills</title>
 			  	<link rel="stylesheet" href="styles.css">
 			</head>
 			<body>
 				<div class="container">
 				    <header>
-				      <img src='https://ik.imagekit.io/d3kzbpbila/1688014993039_-b5_1kWCl.jpg?updatedAt=1688017140508' alt="">
+				      <img src='https://ik.imagekit.io/d3kzbpbila/thejashari_j2DZ5zRnQ' alt="">
 				    </header>
 				    <div class="content">
-				    	<h1 class="headline" >Thank you for registering for the workshop: Kickstart Javascript for beginners</h1>
+				    	<h1 class="headline" >Thank you for registering for the workshop: API Development Workshop</h1>
 			    		<h2><strong>Join Workshop:</strong></h2>
 			    		<ul>
 				          <li>Google Meet :- Meeting link will be shared one day before the workshop in Mail Inbox and Whatsapp Group</li>
@@ -401,41 +401,31 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 				        </ul>
 				    	<h2><strong>Workshop Details:</strong></h2>
 				    	<ul>
-					        <li><strong>Description:</strong> Gain knowledge about the importance of JavaScript in development field then the basics and intermediate level of Javascript.</li>
-					        <li><strong>Date and Time:</strong> 1/7 Saturday (Evening:7pm - 9pm), 2/7 Sunday (Evening:7pm - 9pm)</li>
+					        <li><strong>Description:</strong> Know the Insights of of API development in this workshop. From mastering Node.js fundamentals to crafting efficient RESTful APIs, develop middlewares, authentication, and more. Elevate your skills on API in this workshop designed for a hands-on learning experience in the dynamic world of API development.</li>
+					        <li><strong>Date and Time:</strong> 27/1 Saturday (Evening:7pm - 9pm)</li>
 					        <li><strong>Duration:</strong> 2 Days</li>
 					        <li><strong>Topics to be Covered:</strong></li>
 					        <ul>
 					        	<li>
 					        		Day 1:- (1/7 Saturday)
 					        		<ol>
-					        			<li>Introduction and Workshop Overview</li>
-					        			<li>JavaScript Basics & Fundamentals</li>					        			
-					        			<li>Control flow</li>
-					        			<li>Javascript DOM</li>
-					        			<li>Q&A Session</li>
-					        		</ol>
-					        	</li>
-					        	<li>
-					        		Day 2:- (2/7 Sunday)
-					        		<ol>
-					        			<li>Recap of Day 1/li>
-					        			<li>Javascript functions</li>					        			
-					        			<li>Event Handling</li>
-					        			<li>Intro to js frameworks</li>
-					        			<li>Simple project</li>
-					        			<li>Q&A Session</li>
+					        			<li>Introduction to API</li>
+					        			<li>NodeJS & ExpressJS Basics</li>					        			
+					        			<li>Routing & HTTP Methods with CRUD </li>
+					        			<li>Middlewares</li>
+					        			<li>Authentication</li>
 					        		</ol>
 					        	</li>
 						    </ul>
 					        
 					        <h2>For more information visit our website</h2>
-					        <a href="https://tnsacademy.vercel.app"><button class="button">TNS-ACADEMY</button></a>
+					        <a href="https://21skills.vercel.app"><button class="button">21st Skills</button></a>
 					    </ul>
 					    <h2><strong>Requirements:</strong></h2>
 				    	<ol>
-				    		<li>A PC with any text editor (visual studio, sublime etc.) for practical sessions</li>
-				    		<li>Basic knowledge of HTML</li>
+				    		<li>NodeJS should be installed on your device, for installing nodejs visit <a href="https://nodejs.org/en">here</a></li>
+				    		<li>Basic programming knowledge</li>
+				    		<li>Basic HTML knowledge</li>
 				    	</ol>
 				    </div>
 				</div>

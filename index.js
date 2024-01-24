@@ -19,142 +19,89 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-let title = 'Kickstart JavaScript for beginners';
-let description = "Gain knowledge about the importance of JavaScript in development field then the basics and intermediate level of Javascript.";
-let image = 'https://ik.imagekit.io/d3kzbpbila/1688014993039_-b5_1kWCl.jpg?updatedAt=1688017140508';
-let startsAt = '1-7-23 (Saturday)';
-let duration = '2 Days';
+let title = 'API Development Workshop';
+let description = "Know the Insights of of API development in this workshop. From mastering Node.js fundamentals to crafting efficient RESTful APIs, develop middlewares, authentication, and more. Elevate your skills on API in this workshop designed for a hands-on learning experience in the dynamic world of API development.";
+let image = 'api-workshop.png';
+let startsAt = '27-1-2024 (Saturday)';
+let duration = '1 Day';
 let datesAndTimings = [
-	'1/7 Saturday (Evening:7pm - 9pm)',
-	'2/7 Sunday (Evening:7pm - 9pm)'
+	'27/1 Saturday (Evening:7pm - 9pm)',
 ]
 const workshopStructure = [
   {
     day: "Day 1",
-    date: "1/7 Saturday",
+    date: "27/1 Saturday",
     time: "Evening: 7pm-9pm",
     sessions: [
       {
         sessionNumber: 1,
-        title: "Introduction and Workshop Overview",
+        title: "Introduction to API",
         duration: "10 mins",
         topics:[
-        	'Provide an overview of the workshop agenda and goals.'
+        	'An overview of the workshop agenda and goals and general information about API.'
         ]
       },
       {
         sessionNumber: 2,
-        title: "Javascript Basics",
-        duration: "40 mins",
+        title: "NodeJS & ExpressJS Basics",
+        duration: "25 mins",
         topics: [
-          "Introduction to Javascript and its role in development field.",
-          "Syntax, variables,data types and operators in Javascript.",
+          "We explore what is NodeJS and some general information about programming in NodeJS.",
+          "We will create an simple HTTP Server with NodeJS and connect a website with it.",
+          "Exploring ExpressJS by creating a server.",
         ]
       },
       {
         sessionNumber: 3,
-        title: "Break",
-        duration: "5 mins"
+        title: "Routing & HTTP Methods with CRUD",
+        duration: "25 mins",
+        topics: [
+          "Learn the art of routing in Express.js, enabling seamless navigation and organization of endpoints within your web application.",
+          "Understand the different HTTP methods (GET, POST, PUT, DELETE) and how they make interactions between clients and servers."
+        ]
       },
       {
         sessionNumber: 4,
-        title: "Control Flow",
-        duration: "30 mins",
+        title: "Middlewares",
+        duration: "10 mins",
         topics: [
-          "Conditional Statements (if/else,switch) and loops(for,while) in js."
+          "Learn what is Middlewares and how to develop it in ExpressJS, know about its role in handling requests and enhancing functionality of a website.",
         ]
       },
       {
         sessionNumber: 5,
-        title: "Introduction to DOM",
-        duration: "30 mins",
+        title: "Authentication",
+        duration: "25 mins",
         topics: [
-          "Introduction to DOM.",
-          "Selecting and modifying HTML elements using js",
-          "Hands on exercises to practice control flow concepts and DOM"
+          "Implement security measures for your API with authentication methods and learn how to configure an API with JWT.",
         ]
       },
       {
         sessionNumber: 6,
+        title: "Intro to Swagger",
+        duration: "10 mins",
+        topics: [
+          "Learn to document your APIs effectively using Swagger, enhancing collaboration and understanding among developers.",
+        ]
+      },
+      {
+        sessionNumber: 7,
+        title: "Deploying Node.js API",
+        duration: "10 mins",
+        topics: [
+          "Navigate the process of deploying your Node.js API, ensuring it is ready to serve users in a production environment.",
+        ]
+      },
+      {
+        sessionNumber: 8,
         title: "Q&A Session",
         duration: "5 mins"
       }
     ]
   },
-  {
-    day: "Day 2",
-    date: "2/7 Sunday",
-    time: "Evening: 7pm-9pm",
-    sessions: [
-      {
-        sessionNumber: 1,
-        title: "Recap of Day 1",
-        duration: "5 mins",
-        topics: [
-          "Summary of Javascript basics, control flow, and DOM manipulation covered on first day."
-        ]
-      },
-      {
-        sessionNumber: 2,
-        title: "Javascript functions",
-        duration: "30 mins",
-        topics: [
-          "Introduction to functions in JavaScript.",
-          "Function declaration, parameters, return statements, and function invocation.",
-          "Hands-on exercises to practice writing and using functions.",
-        ]
-      },
-      {
-        sessionNumber: 3,
-        title: "Break",
-        duration: "5 mins",
-        topics: [
-          "Recap of functions in JavaScript.",
-        ]
-      },
-      {
-        sessionNumber: 4,
-        title: "Event Handling",
-        duration: "45 mins",
-        topics: [
-          "Understanding events and event-driven programming.",
-          "Handling events in JavaScript using event listeners.",
-          "Hands-on exercises to practice event handling and creating interactive web pages."
-        ]
-      },
-      {
-        sessionNumber: 5,
-        title: "Break",
-        duration: "10 mins",
-        topics: [
-          "Recap of key concepts covered in the workshop.",
-          "Resources and suggestions will be provided for further learning and practice."
-        ]
-      },
-      {
-        sessionNumber: 6,
-        title: "Introduction to JavaScript Libraries and Frameworks",
-        duration: "15 mins",
-        topics:[
-          "Overview of popular JavaScript libraries and frameworks (e.g., React, Angular, Vue.js).",
-          "Discussing the benefits and use cases of using JavaScript libraries and frameworks."
-        ]
-      },
-      {
-        sessionNumber: 7,
-        title: "Resources for Simple Project that combines JavaScript, DOM manipulation, and event handling.",
-        duration: "5 mins",
-      },
-      {
-        sessionNumber: 8,
-        title: "Q&A session",
-        duration: "5 mins",
-      },
-
-    ]
-  }
+  
 ];
-const meetingLink = 'https://meet.google.com/wjp-mjka-cwd'
+const meetingLink = 'https://meet.google.com/sjz-wjsb-cgs'
 
 // const {data} = axios.post('http://localhost:3333/api/auth/createWorkshop',{
 // 	title,description,image,startsAt,duration,datesAndTimings,learn:workshopStructure,meetingLink
@@ -381,7 +328,7 @@ mongoose.connect("mongodb+srv://thejashari:letmegoin@tns-academy.oc6yct8.mongodb
 	console.log(err,'DB not connected');
 });
 
-let PORT = process.env.PORT || 3334;
+let PORT = process.env.PORT || 3333;
 
 app.get('/',(req,res)=>{
 	res.send(`<h1>Hello</h1>`)
