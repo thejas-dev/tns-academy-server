@@ -368,6 +368,15 @@ module.exports.login = async(req,res,next)=>{
 	}
 }
 
+module.exports.getAllUsers = async(req,res,next) => {
+	try{
+		const user = await User.find();
+		return res.json({status:true,user});
+	}catch(ex){
+		next(ex)
+	}
+}
+
 module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 	try{
 		const id = req.params.id;
@@ -390,10 +399,10 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 			<body>
 				<div class="container">
 				    <header>
-				      <img src='https://ik.imagekit.io/d3kzbpbila/thejashari_j2DZ5zRnQ' alt="">
+				      <img src='https://ik.imagekit.io/d3kzbpbila/thejashari_xBYRcXV8x' alt="">
 				    </header>
 				    <div class="content">
-				    	<h1 class="headline" >Thank you for registering for the workshop: API Development Workshop</h1>
+				    	<h1 class="headline" >Thank you for registering for the workshop: Hands-on Linux Basics and Bash Scripting Workshop</h1>
 			    		<h2><strong>Join Workshop:</strong></h2>
 			    		<ul>
 				          <li>Google Meet :- Meeting link will be shared one day before the workshop in Mail Inbox and Whatsapp Group</li>
@@ -402,18 +411,18 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 				    	<h2><strong>Workshop Details:</strong></h2>
 				    	<ul>
 					        <li><strong>Description:</strong> Know the Insights of of API development in this workshop. From mastering Node.js fundamentals to crafting efficient RESTful APIs, develop middlewares, authentication, and more. Elevate your skills on API in this workshop designed for a hands-on learning experience in the dynamic world of API development.</li>
-					        <li><strong>Date and Time:</strong> 27/1 Saturday (Evening:7pm - 9pm)</li>
-					        <li><strong>Duration:</strong> 2 Days</li>
+					        <li><strong>Date and Time:</strong> 3/2 Saturday (Evening:7pm - 9pm)</li>
+					        <li><strong>Duration:</strong>2 Hours</li>
 					        <li><strong>Topics to be Covered:</strong></li>
 					        <ul>
 					        	<li>
 					        		Day 1:- (1/7 Saturday)
 					        		<ol>
-					        			<li>Introduction to API</li>
-					        			<li>NodeJS & ExpressJS Basics</li>					        			
-					        			<li>Routing & HTTP Methods with CRUD </li>
-					        			<li>Middlewares</li>
-					        			<li>Authentication</li>
+					        			<li>Introduction to Linux and Cloud Shell</li>
+					        			<li>Basic & Advanced Commands in linux</li>					        			
+					        			<li>Intro to bash</li>
+					        			<li>Bash Scripting</li>
+					        			<li>Hands-on Projects with Bash</li>
 					        		</ol>
 					        	</li>
 						    </ul>
@@ -423,9 +432,7 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 					    </ul>
 					    <h2><strong>Requirements:</strong></h2>
 				    	<ol>
-				    		<li>NodeJS should be installed on your device, for installing nodejs visit <a href="https://nodejs.org/en">here</a></li>
-				    		<li>Basic programming knowledge</li>
-				    		<li>Basic HTML knowledge</li>
+				    		<li>Ensure you have a desktop with an internet connection. If you have Kali Linux installed on a virtual machine, that would be beneficial; otherwise, you can use the cloud shell through the webinar.</li>
 				    	</ol>
 				    </div>
 				</div>

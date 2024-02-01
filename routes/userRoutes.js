@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const {login,register,updateRegisteredWorkshops,updateCertificates,
-	enrollCourse,updateUserCourses,updateImage,courseCompletedRoute} = require('../controllers/userControllers')
+	enrollCourse,updateUserCourses,updateImage,courseCompletedRoute,
+	getAllUsers} = require('../controllers/userControllers')
 const {getAllWorkshops,createWorkshop,updateWorkshop,getWorkshop}  =require('../controllers/workshopControllers');
 const {createCourse,fetchCourse,getAllCourses} = require('../controllers/courseControllers');
 const {createQuiz,verifyQuiz,getAllQuiz} = require('../controllers/quizControllers');
@@ -23,5 +24,6 @@ router.post('/updateUserCourses/:id',updateUserCourses);
 router.get('/getAllCourses',getAllCourses);
 router.post('/updateImage/:id',updateImage);
 router.post('/courseCompletedRoute',courseCompletedRoute);
+router.post('/getAllUsers',getAllUsers)
 
 module.exports = router;

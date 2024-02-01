@@ -19,81 +19,94 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-let title = 'API Development Workshop';
-let description = "Know the Insights of of API development in this workshop. From mastering Node.js fundamentals to crafting efficient RESTful APIs, develop middlewares, authentication, and more. Elevate your skills on API in this workshop designed for a hands-on learning experience in the dynamic world of API development.";
-let image = 'api-workshop.png';
-let startsAt = '27-1-2024 (Saturday)';
+let title = 'Linux Basics and Bash Scripting';
+let description = "Know the Insights of of Linux and Bash scripting in this workshop. This session will equip you with essential skills to navigate the Linux operating system seamlessly and harness the power of Bash scripting for automation.";
+let image = 'linux-workshop.jpg';
+let startsAt = '3-2-2024 (Saturday)';
 let duration = '1 Day';
 let datesAndTimings = [
-	'27/1 Saturday (Evening:7pm - 9pm)',
+	'3/2 Saturday (Evening:7pm - 9pm)',
 ]
 const workshopStructure = [
   {
     day: "Day 1",
-    date: "27/1 Saturday",
+    date: "3/2 Saturday",
     time: "Evening: 7pm-9pm",
     sessions: [
       {
         sessionNumber: 1,
-        title: "Introduction to API",
+        title: "Introduction to Linux",
         duration: "10 mins",
         topics:[
-        	'An overview of the workshop agenda and goals and general information about API.'
+        	'Gain a foundational understanding of Linux and its pivotal role in the tech ecosystem.'
         ]
       },
       {
         sessionNumber: 2,
-        title: "NodeJS & ExpressJS Basics",
-        duration: "25 mins",
+        title: "Exploring Linux Directories",
+        duration: "10 mins",
         topics: [
-          "We explore what is NodeJS and some general information about programming in NodeJS.",
-          "We will create an simple HTTP Server with NodeJS and connect a website with it.",
-          "Exploring ExpressJS by creating a server.",
+          "Navigate the intricate directory structures of Linux, unraveling the mysteries of file organization.",
         ]
       },
       {
         sessionNumber: 3,
-        title: "Routing & HTTP Methods with CRUD",
-        duration: "25 mins",
+        title: "File Handling",
+        duration: "10 mins",
         topics: [
-          "Learn the art of routing in Express.js, enabling seamless navigation and organization of endpoints within your web application.",
-          "Understand the different HTTP methods (GET, POST, PUT, DELETE) and how they make interactions between clients and servers."
+          "Master the basics of file manipulation, from creating to modifying files, in a hands-on environment.",
         ]
       },
       {
         sessionNumber: 4,
-        title: "Middlewares",
+        title: "Basic Linux Commands",
         duration: "10 mins",
         topics: [
-          "Learn what is Middlewares and how to develop it in ExpressJS, know about its role in handling requests and enhancing functionality of a website.",
+          "Elevate your efficiency with fundamental command-line operations, enhancing your Linux proficiency.",
         ]
       },
       {
         sessionNumber: 5,
-        title: "Authentication",
-        duration: "25 mins",
+        title: "Advanced Linux Commands",
+        duration: "20 mins",
         topics: [
-          "Implement security measures for your API with authentication methods and learn how to configure an API with JWT.",
+          "Unlock the potential of advanced commands, streamlining your workflow and boosting productivity.",
         ]
       },
       {
         sessionNumber: 6,
-        title: "Intro to Swagger",
-        duration: "10 mins",
+        title: "Working with Apache Server",
+        duration: "15 mins",
         topics: [
-          "Learn to document your APIs effectively using Swagger, enhancing collaboration and understanding among developers.",
+          "Delve into the essentials of setting up and managing an Apache web server, a valuable skill for web developers.",
         ]
       },
       {
         sessionNumber: 7,
-        title: "Deploying Node.js API",
-        duration: "10 mins",
+        title: "Intro to Bash",
+        duration: "5 mins",
         topics: [
-          "Navigate the process of deploying your Node.js API, ensuring it is ready to serve users in a production environment.",
+          "Explore Bash scripting, understanding its significance in automation and task automation.",
         ]
       },
       {
         sessionNumber: 8,
+        title: "Bash Scripting",
+        duration: "25 mins",
+        topics: [
+          "Take your first steps into scripting with Bash, creating powerful yet simple scripts to automate tasks.",
+        ]
+      },
+      {
+        sessionNumber: 9,
+        title: "Hands-on Excercise",
+        duration: "20 mins",
+        topics: [
+          "Apply acquired knowledge in a practical exercise, reinforcing your understanding through real-world scenarios.",
+        ]
+      },
+      {
+        sessionNumber: 10,
         title: "Q&A Session",
         duration: "5 mins"
       }
@@ -101,7 +114,7 @@ const workshopStructure = [
   },
   
 ];
-const meetingLink = 'https://meet.google.com/sjz-wjsb-cgs'
+const meetingLink = 'https://meet.google.com/twt-hsyp-ocj'
 
 // const {data} = axios.post('http://localhost:3333/api/auth/createWorkshop',{
 // 	title,description,image,startsAt,duration,datesAndTimings,learn:workshopStructure,meetingLink
