@@ -402,7 +402,7 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 				      <img src='https://ik.imagekit.io/d3kzbpbila/thejashari_xBYRcXV8x' alt="">
 				    </header>
 				    <div class="content">
-				    	<h1 class="headline" >Thank you for registering for the workshop: Hands-on Linux Basics and Bash Scripting Workshop</h1>
+				    	<h1 class="headline" >Thank you for registering for the workshop: Frontend Interview Preparation Workshop</h1>
 			    		<h2><strong>Join Workshop:</strong></h2>
 			    		<ul>
 				          <li>Google Meet :- Meeting link will be shared one day before the workshop in Mail Inbox and Whatsapp Group</li>
@@ -410,19 +410,18 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 				        </ul>
 				    	<h2><strong>Workshop Details:</strong></h2>
 				    	<ul>
-					        <li><strong>Description:</strong> Know the Insights of of API development in this workshop. From mastering Node.js fundamentals to crafting efficient RESTful APIs, develop middlewares, authentication, and more. Elevate your skills on API in this workshop designed for a hands-on learning experience in the dynamic world of API development.</li>
-					        <li><strong>Date and Time:</strong> 3/2 Saturday (Evening:7pm - 9pm)</li>
+					        <li><strong>Description:</strong> Are you gearing up for a frontend developer role and aiming to ace your interviews? Join us for an interactive workshop designed to sharpen your skills in HTML, CSS, and JavaScript – the foundational trio of frontend development.</li>
+					        <li><strong>Date and Time:</strong> 10/2 Saturday (Evening:7pm - 9pm)</li>
 					        <li><strong>Duration:</strong>2 Hours</li>
 					        <li><strong>Topics to be Covered:</strong></li>
 					        <ul>
 					        	<li>
-					        		Day 1:- (1/7 Saturday)
+					        		Day 1:- (10/2 Saturday)
 					        		<ol>
-					        			<li>Introduction to Linux and Cloud Shell</li>
-					        			<li>Basic & Advanced Commands in linux</li>					        			
-					        			<li>Intro to bash</li>
-					        			<li>Bash Scripting</li>
-					        			<li>Hands-on Projects with Bash</li>
+					        			<li>HTML Interview Questions</li>
+					        			<li>CSS Interview Questions</li>					        			
+					        			<li>JS Interview Questions</li>
+					        			<li>Projects based Interview Questions</li>
 					        		</ol>
 					        	</li>
 						    </ul>
@@ -432,7 +431,7 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 					    </ul>
 					    <h2><strong>Requirements:</strong></h2>
 				    	<ol>
-				    		<li>Ensure you have a desktop with an internet connection. If you have Kali Linux installed on a virtual machine, that would be beneficial; otherwise, you can use the cloud shell through the webinar.</li>
+				    		<li>No prerequisites required.</li>
 				    	</ol>
 				    </div>
 				</div>
@@ -534,3 +533,19 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 	}
 }
 
+module.exports.getUsersByCourseId = async(req,res,next) => {
+	try{
+		const {courseId,token} = req.body;
+		if(token==='JgWG+vM4jLsND0i25Dqo6Q=='){
+			const user = await User.find({enrolledCoursesId:courseId});
+			if(user){
+				return res.json({status:true,user})
+			}
+			return res.json({status:false,msg:"Something went wrong!"})
+		}else{
+			return res.json({error:"Error!"})
+		}
+	}catch(ex){
+		next(ex)
+	}
+}

@@ -19,90 +19,42 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-let title = 'Linux Basics and Bash Scripting';
-let description = "Know the Insights of of Linux and Bash scripting in this workshop. This session will equip you with essential skills to navigate the Linux operating system seamlessly and harness the power of Bash scripting for automation.";
-let image = 'linux-workshop.jpg';
-let startsAt = '3-2-2024 (Saturday)';
+let title = 'Frontend Interview Preparation';
+let description = "Are you gearing up for a frontend developer role and aiming to ace your interviews? Join us for an interactive workshop designed to sharpen your skills in HTML, CSS, and JavaScript – the foundational trio of frontend development.";
+let image = 'frontend-workshop';
+let startsAt = '10-2-24 (Saturday)';
 let duration = '1 Day';
 let datesAndTimings = [
-	'3/2 Saturday (Evening:7pm - 9pm)',
+	'10/2 Saturday (Evening:7pm - 9pm)',
 ]
 const workshopStructure = [
   {
     day: "Day 1",
-    date: "3/2 Saturday",
+    date: "10/2 Saturday",
     time: "Evening: 7pm-9pm",
     sessions: [
       {
         sessionNumber: 1,
-        title: "Introduction to Linux",
-        duration: "10 mins",
+        title: "HTML Interview Quesions",
+        duration: "30 mins",
         topics:[
-        	'Gain a foundational understanding of Linux and its pivotal role in the tech ecosystem.'
+        	'Learn the core structure of web pages, learn about semantic markup, and understand the essential tags that form the backbone of every web document.'
         ]
       },
       {
         sessionNumber: 2,
-        title: "Exploring Linux Directories",
-        duration: "10 mins",
+        title: "CSS Interview Quesions",
+        duration: "45 mins",
         topics: [
-          "Navigate the intricate directory structures of Linux, unraveling the mysteries of file organization.",
+          "Learn the secrets of styling as we explore selectors, cascading styles, and responsive design techniques. Get hands-on experience in crafting visually appealing and responsive user interfaces.",
         ]
       },
       {
         sessionNumber: 3,
-        title: "File Handling",
-        duration: "10 mins",
+        title: "Javascipt Interview Quesions",
+        duration: "40 mins",
         topics: [
-          "Master the basics of file manipulation, from creating to modifying files, in a hands-on environment.",
-        ]
-      },
-      {
-        sessionNumber: 4,
-        title: "Basic Linux Commands",
-        duration: "10 mins",
-        topics: [
-          "Elevate your efficiency with fundamental command-line operations, enhancing your Linux proficiency.",
-        ]
-      },
-      {
-        sessionNumber: 5,
-        title: "Advanced Linux Commands",
-        duration: "20 mins",
-        topics: [
-          "Unlock the potential of advanced commands, streamlining your workflow and boosting productivity.",
-        ]
-      },
-      {
-        sessionNumber: 6,
-        title: "Working with Apache Server",
-        duration: "15 mins",
-        topics: [
-          "Delve into the essentials of setting up and managing an Apache web server, a valuable skill for web developers.",
-        ]
-      },
-      {
-        sessionNumber: 7,
-        title: "Intro to Bash",
-        duration: "5 mins",
-        topics: [
-          "Explore Bash scripting, understanding its significance in automation and task automation.",
-        ]
-      },
-      {
-        sessionNumber: 8,
-        title: "Bash Scripting",
-        duration: "25 mins",
-        topics: [
-          "Take your first steps into scripting with Bash, creating powerful yet simple scripts to automate tasks.",
-        ]
-      },
-      {
-        sessionNumber: 9,
-        title: "Hands-on Excercise",
-        duration: "20 mins",
-        topics: [
-          "Apply acquired knowledge in a practical exercise, reinforcing your understanding through real-world scenarios.",
+          "Elevate your JavaScript expertise with a focus on essential concepts like variables, loops, functions, and closures. Explore real-world scenarios to strengthen your problem-solving skills.",
         ]
       },
       {
@@ -114,7 +66,7 @@ const workshopStructure = [
   },
   
 ];
-const meetingLink = 'https://meet.google.com/twt-hsyp-ocj'
+const meetingLink = 'https://meet.google.com/fia-fego-knm'
 
 // const {data} = axios.post('http://localhost:3333/api/auth/createWorkshop',{
 // 	title,description,image,startsAt,duration,datesAndTimings,learn:workshopStructure,meetingLink

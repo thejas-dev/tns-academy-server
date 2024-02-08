@@ -48,7 +48,7 @@ const sendMail = async (name,email) => {
         address:'21stskills.com@gmail.com'
       },
       to: email,
-      subject: `API Development Workshop - Final Reminder`,
+      subject: `Reminder: Linux Basics and Bash Scripting Workshop and Installation Guide`,
       html: `
 				<!DOCTYPE html>
 				<html lang="en">
@@ -106,27 +106,27 @@ const sendMail = async (name,email) => {
 
 				<body>
 				  <div class="container">
-				    <img class="banner" src="https://www.gethow.org/wp-content/uploads/2018/07/api.jpg" alt="Workshop Banner">
+				    <img class="banner" src="https://21stskills.vercel.app/linux-workshop.jpg" alt="Workshop Banner">
 
-				    <h1>API Development Workshop - Final Reminder</h1>
+				    <h1>Linux Fundamentals and Bash Scripting Workshop - Reminder</h1>
 
 				    <p>Hello ${name},</p>
 
-				    <p>This is your gentle reminder for the API Development Workshop scheduled for today, 27th January 2024, at 7:00 PM.</p>
+				    <p>This is your gentle reminder for the Bash Scripting and Linux Workshop happening on 3rd February 2024, at 7:00 PM.</p>
 
 				    <h2>Session Details:</h2>
 				    <ul>
-				      <li><strong>Date:</strong> 27th January 2024 (Saturday)</li>
+				      <li><strong>Date:</strong> 3rd February 2024 (Saturday)</li>
 				      <li><strong>Time:</strong> 7:00 PM - 9:00 PM</li>
 				      <li><strong>Duration:</strong> 2 hours</li>
-				      <li><strong>Location:</strong> <a href="https://meet.google.com/sjz-wjsb-cgs" target="_blank">Google Meet Link</a></li>
+				      <li><strong>Location:</strong> <a href="https://meet.google.com/twt-hsyp-ocj" target="_blank">Google Meet Link</a></li>
 				    </ul>
 
 				    <h2>Preparation:</h2>
-				    <p>Make sure you have Node.js installed on your machine before the session. If you haven't done so already, you can follow the installation instructions provided in this <a href="https://youtu.be/r2Oxzl4FhGk?si=8oGNKl3b1l6dTRBN" target="_blank">YouTube video</a>.</p>
+				    <p>Ensure you have a desktop with an internet connection. If you have Kali Linux installed on a virtual machine, that would be beneficial; otherwise, you can use the cloud shell through the webinar. If you want to install linux on windows machine, you can follow the installation instructions provided in this <a href="https://youtu.be/huCjbuFLsIg?si=T1Kyu6yOeOBwVyh5v" target="_blank">YouTube video</a>.</p>
 
 				    <h3>Installation Video:</h3>
-				    <p><a href="https://youtu.be/r2Oxzl4FhGk?si=8oGNKl3b1l6dTRBN" target="_blank">YouTube Video - How to Install Node.js</a></p>
+				    <p><a href="https://youtu.be/huCjbuFLsIg?si=T1Kyu6yOeOBwVyh5v" target="_blank">YouTube Video - How to Install Linux on windows machine</a></p>
 
 				    <p>We look forward to having you join us for an insightful and hands-on learning experience. If you have any questions or encounter any issues, feel free to reach out to us.</p>
 
@@ -135,7 +135,7 @@ const sendMail = async (name,email) => {
 				      Founder, 21st Skills<br>
 				      <a href="https://linkedin/in/thejashari" target="_blank">Linkedin</a></p>
 
-				    <a class="cta-button" href="https://meet.google.com/sjz-wjsb-cgs" target="_blank">Join Workshop</a>
+				    <a class="cta-button" href="https://meet.google.com/twt-hsyp-ocj" target="_blank">Join Workshop</a>
 				  </div>
 				</body>
 
@@ -204,7 +204,7 @@ const diffUsers = async() => {
 // diffUsers()
 
 const fetchUsers = async() => {
-	const {data} = await axios.post('http://localhost:3333/api/auth/getWorkshop/65b024e37df1619b5bfaef84')
+	const {data} = await axios.post('http://localhost:3333/api/auth/getWorkshop/65b4bd00ed9d87145d75ebe2')
 	console.log(data.obj[0]?.registeredParticipants)
 	const registeredParticipants = data.obj[0]?.registeredParticipants;
 	console.log(registeredParticipants.length)
@@ -220,7 +220,7 @@ const fetchUsers = async() => {
     console.log('No registered participants found.');
   }
 }
-// fetchUsers()
+fetchUsers()
 
 
 module.exports = app
