@@ -275,7 +275,7 @@ const sendMail = async (name,email) => {
 } 
 
 // sendMail('Thejas hari','thejaskala308@gmail.com')
-app.use(cors())
+// app.use(cors())
 app.use(cors({
   origin: ['http://tnsacademy.vercel.app','https://21stskills.vercel.app','https://21stskills.com','https://university.21stskills.com'], 
   credentials: true,
