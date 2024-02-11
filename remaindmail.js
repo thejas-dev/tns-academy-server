@@ -48,99 +48,78 @@ const sendMail = async (name,email) => {
         address:'21stskills.com@gmail.com'
       },
       to: email,
-      subject: `Reminder: Linux Basics and Bash Scripting Workshop and Installation Guide`,
+      subject: `Frontend Interview Workshop Started! 🚀`,
       html: `
 				<!DOCTYPE html>
-				<html lang="en">
+					<html lang="en">
+					<head>
+					    <meta charset="UTF-8">
+					    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+					    <style>
+					        body {
+					            font-family: 'Arial', sans-serif;
+					            margin: 0;
+					            padding: 0;
+					            background-color: #f4f4f4;
+					        }
 
-				<head>
-				  <meta charset="UTF-8">
-				  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-				  <style>
-				    body {
-				      font-family: Arial, sans-serif;
-				      margin: 0;
-				      padding: 0;
-				      background-color: #f5f5f5;
-				    }
+					        .container {
+					            max-width: 600px;
+					            margin: 20px auto;
+					            background-color: #ffffff;
+					            padding: 20px;
+					            border-radius: 8px;
+					            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+					        }
 
-				    .container {
-				      max-width: 600px;
-				      margin: 20px auto;
-				      background-color: #fff;
-				      padding: 20px;
-				      border-radius: 8px;
-				      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-				    }
+					        h1 {
+					            color: #333333;
+					        }
 
-				    h1 {
-				      color: #333;
-				      text-align: center;
-				    }
+					        p {
+					            color: #555555;
+					        }
 
-				    p {
-				      color: #555;
-				      line-height: 1.6;
-				    }
-
-				    .banner {
-				      width: 100%;
-				      max-height: 150px;
-				      object-fit: cover;
-				      border-radius: 8px;
-				      margin-bottom: 20px;
-				    }
-
-				    .cta-button {
-				      display: block;
-				      margin: 20px auto;
-				      padding: 10px 20px;
-				      background-color: #3498db;
-				      color: #fff;
-				      text-decoration: none;
-				      text-align: center;
-				      border-radius: 5px;
-				    }
-				  </style>
-				</head>
-
-				<body>
-				  <div class="container">
-				    <img class="banner" src="https://21stskills.vercel.app/linux-workshop.jpg" alt="Workshop Banner">
-
-				    <h1>Linux Fundamentals and Bash Scripting Workshop - Reminder</h1>
-
-				    <p>Hello ${name},</p>
-
-				    <p>This is your gentle reminder for the Bash Scripting and Linux Workshop happening on 3rd February 2024, at 7:00 PM.</p>
-
-				    <h2>Session Details:</h2>
-				    <ul>
-				      <li><strong>Date:</strong> 3rd February 2024 (Saturday)</li>
-				      <li><strong>Time:</strong> 7:00 PM - 9:00 PM</li>
-				      <li><strong>Duration:</strong> 2 hours</li>
-				      <li><strong>Location:</strong> <a href="https://meet.google.com/twt-hsyp-ocj" target="_blank">Google Meet Link</a></li>
-				    </ul>
-
-				    <h2>Preparation:</h2>
-				    <p>Ensure you have a desktop with an internet connection. If you have Kali Linux installed on a virtual machine, that would be beneficial; otherwise, you can use the cloud shell through the webinar. If you want to install linux on windows machine, you can follow the installation instructions provided in this <a href="https://youtu.be/huCjbuFLsIg?si=T1Kyu6yOeOBwVyh5v" target="_blank">YouTube video</a>.</p>
-
-				    <h3>Installation Video:</h3>
-				    <p><a href="https://youtu.be/huCjbuFLsIg?si=T1Kyu6yOeOBwVyh5v" target="_blank">YouTube Video - How to Install Linux on windows machine</a></p>
-
-				    <p>We look forward to having you join us for an insightful and hands-on learning experience. If you have any questions or encounter any issues, feel free to reach out to us.</p>
-
-				    <p>Best regards,<br>
-				      N.U.Thejas hari<br>
-				      Founder, 21st Skills<br>
-				      <a href="https://linkedin/in/thejashari" target="_blank">Linkedin</a></p>
-
-				    <a class="cta-button" href="https://meet.google.com/twt-hsyp-ocj" target="_blank">Join Workshop</a>
-				  </div>
-				</body>
-
-				</html>
-       
+					        .cta-button {
+					            display: inline-block;
+					            padding: 10px 20px;
+					            background-color: #3498db;
+					            color: #ffffff;
+					            text-decoration: none;
+					            border-radius: 5px;
+					            margin-top: 20px;
+					        }
+					        .banner {
+							      width: 100%;
+							      max-height: 150px;
+							      object-fit: cover;
+							      border-radius: 8px;
+							      margin-bottom: 20px;
+							    }
+					    </style>
+					</head>
+					<body>
+					    <div class="container">
+					        <img class="banner" src="https://21stskills.vercel.app/frontend-workshop" alt="Workshop Banner">
+					        <h1>Reminder: Your Registered Frontend Interview Preparation Workshop Has Started! 🌟</h1>
+					        <p>Hello ${name},</p>
+					        <p>We hope this message finds you well. Just a friendly reminder that the "Frontend Interview Preparation Workshop" is Started!</p>
+					        <p><strong>Workshop Details:</strong></p>
+					        <ul>
+					            <li><strong>Title:</strong> Frontend Interview Preparation Workshop</li>
+					            <li><strong>Date:</strong> 10/2/2024</li>
+					            <li><strong>Timing:</strong> 7:00 PM - 9:00 PM</li>
+					            <li><strong>Google Meet Link:</strong> <a href="https://meet.google.com/fia-fego-knm">https://meet.google.com/fia-fego-knm</a></li>
+					        </ul>
+					        <a href="https://meet.google.com/fia-fego-knm" class="cta-button">Join Workshop</a>
+					        <p>If you have any questions or need assistance, feel free to reach out.</p>
+					        
+					        <p>Best regards,</p>
+					        <p>N.U.Thejas hari</p>
+					        <p>Founder, 21st Skills</p>
+					    </div>
+					</body>
+					</html>
 
 
       `
@@ -176,7 +155,7 @@ const allUsers = async() => {
 	const jsonString = JSON.stringify(allUsers, null, 2);
 	fs.writeFileSync('allUsers.json', jsonString, 'utf-8');
 
-  console.log('Data successfully stored in unregisteredUsers.json');
+  console.log('Data successfully stored in allUsers.json');
 
 }
 
@@ -204,7 +183,7 @@ const diffUsers = async() => {
 // diffUsers()
 
 const fetchUsers = async() => {
-	const {data} = await axios.post('http://localhost:3333/api/auth/getWorkshop/65b4bd00ed9d87145d75ebe2')
+	const {data} = await axios.post('http://localhost:3333/api/auth/getWorkshop/65c4ec315a6594a5ea09b47f')
 	console.log(data.obj[0]?.registeredParticipants)
 	const registeredParticipants = data.obj[0]?.registeredParticipants;
 	console.log(registeredParticipants.length)
@@ -220,7 +199,7 @@ const fetchUsers = async() => {
     console.log('No registered participants found.');
   }
 }
-fetchUsers()
+// fetchUsers()
 
 
 module.exports = app
