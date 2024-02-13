@@ -19,52 +19,132 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-let title = 'Frontend Interview Preparation';
-let description = "Are you gearing up for a frontend developer role and aiming to ace your interviews? Join us for an interactive workshop designed to sharpen your skills in HTML, CSS, and JavaScript – the foundational trio of frontend development.";
-let image = 'frontend-workshop';
-let startsAt = '10-2-24 (Saturday)';
-let duration = '1 Day';
+let title = '2-Days Web Development Bootcamp';
+let description = "Unlock the world of web development in our two-day intensive bootcamp! Whether you're a beginner or looking to enhance your skills, join us to dive into the fundamentals of web networking, development, and explore the vast scopes of this dynamic field.";
+let image = 'website-development-workshop.png';
+let startsAt = '17-2-24 (Saturday)';
+let duration = '2 Days';
 let datesAndTimings = [
-	'10/2 Saturday (Evening:7pm - 9pm)',
+  '17/2 Saturday (Evening:7pm - 9pm)',
+	'18/2 Sunday (Evening:7pm - 9pm)',
 ]
 const workshopStructure = [
   {
     day: "Day 1",
-    date: "10/2 Saturday",
+    date: "17/2 Saturday",
     time: "Evening: 7pm-9pm",
     sessions: [
       {
         sessionNumber: 1,
-        title: "HTML Interview Quesions",
-        duration: "30 mins",
+        title: "Workshop Intro",
+        duration: "5 mins",
         topics:[
-        	'Learn the core structure of web pages, learn about semantic markup, and understand the essential tags that form the backbone of every web document.'
+        	'An general Introduction to our academy and discussing of program agenda.'
         ]
       },
       {
         sessionNumber: 2,
-        title: "CSS Interview Quesions",
-        duration: "45 mins",
-        topics: [
-          "Learn the secrets of styling as we explore selectors, cascading styles, and responsive design techniques. Get hands-on experience in crafting visually appealing and responsive user interfaces.",
+        title: "Web Development Fundamentals",
+        duration: "10 mins",
+        topics:[
+          'Understanding the roles of front-end and back-end development.'
         ]
       },
       {
         sessionNumber: 3,
-        title: "Javascipt Interview Quesions",
-        duration: "40 mins",
+        title: "Introduction to Web Networking",
+        duration: "15 mins",
         topics: [
-          "Elevate your JavaScript expertise with a focus on essential concepts like variables, loops, functions, and closures. Explore real-world scenarios to strengthen your problem-solving skills.",
+          "Basics of how the internet & websites works",
+          "Overview of web protocols",
         ]
       },
       {
-        sessionNumber: 10,
-        title: "Q&A Session",
+        sessionNumber: 4,
+        title: "HTML Basics to Intermediate",
+        duration: "60 mins",
+        topics: [
+          "Detailed exploration of HTML elements and document structure.",
+          "Practical hands-on exercises to build static web pages.",
+        ]
+      },
+      {
+        sessionNumber: 5,
+        title: "Semantic HTML",
+        duration: "10 mins",
+        topics: [
+          "Explanation of semantic elements and their impact on accessibility and SEO.",
+        ]
+      },
+      {
+        sessionNumber: 6,
+        title: "Hands-on Projects",
+        duration: "20 mins",
+        topics: [
+          "Guided project combining HTML fundamentals.",
+        ]
+      },
+      {
+        sessionNumber: 7,
+        title: "Introduction to CSS & Q&A Session",
+        duration: "10 mins"
+      }
+    ]
+  },
+  {
+    day: "Day 2",
+    date: "18/2 Saturday",
+    time: "Evening: 7pm-9pm",
+    sessions: [
+      {
+        sessionNumber: 1,
+        title: "Day - 1 Recap",
+        duration: "5 mins",
+        topics:[
+          'Recap of day - 1 will be provided in short discussing of day - 2 agenda.'
+        ]
+      },
+      {
+        sessionNumber: 2,
+        title: "CSS Basics",
+        duration: "70 mins",
+        topics:[
+          'In-depth coverage of CSS syntax and styling properties.',
+          'Hands-on exercises for styling HTML elements with various CSS properties.'
+        ]
+      },
+      {
+        sessionNumber: 3,
+        title: "CSS Animations & Transitions",
+        duration: "20 mins",
+        topics: [
+          "Creating dynamic and engaging interfaces using CSS animations.",
+          "Practical examples and exercises to reinforce animation concepts.",
+        ]
+      },
+      {
+        sessionNumber: 4,
+        title: "CSS Libraries and Frameworks",
+        duration: "10 mins",
+        topics: [
+          "Overview of popular CSS libraries (e.g., Bootstrap, Tailwind CSS).",
+        ]
+      },
+      {
+        sessionNumber: 5,
+        title: "Hands-on Exercise",
+        duration: "10 mins",
+        topics: [
+          "Collaborative hands-on exercise combining HTML and CSS for practical application.",
+        ]
+      },
+      {
+        sessionNumber: 6,
+        title: "Wrap-up & Sharing resources for further learning",
         duration: "5 mins"
       }
     ]
   },
-  
 ];
 const meetingLink = 'https://meet.google.com/fia-fego-knm'
 
