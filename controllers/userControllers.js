@@ -399,10 +399,10 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 			<body>
 				<div class="container">
 				    <header>
-				      <img src='https://ik.imagekit.io/d3kzbpbila/thejashari_xBYRcXV8x' alt="">
+				      <img src='https://21stskills.com/website-development-workshop.png' alt="">
 				    </header>
 				    <div class="content">
-				    	<h1 class="headline" >Thank you for registering for the workshop: Frontend Interview Preparation Workshop</h1>
+				    	<h1 class="headline" >Thank you for registering for the 2 days bootcamp on Web Development</h1>
 			    		<h2><strong>Join Workshop:</strong></h2>
 			    		<ul>
 				          <li>Google Meet :- Meeting link will be shared one day before the workshop in Mail Inbox and Whatsapp Group</li>
@@ -410,24 +410,33 @@ module.exports.updateRegisteredWorkshops = async(req,res,next) => {
 				        </ul>
 				    	<h2><strong>Workshop Details:</strong></h2>
 				    	<ul>
-					        <li><strong>Description:</strong> Are you gearing up for a frontend developer role and aiming to ace your interviews? Join us for an interactive workshop designed to sharpen your skills in HTML, CSS, and JavaScript – the foundational trio of frontend development.</li>
-					        <li><strong>Date and Time:</strong> 10/2 Saturday (Evening:7pm - 9pm)</li>
+					        <li><strong>Description:</strong> Are you a beginner eager to explore the magic of web development, or someone looking to level up your skills? Join us for an exciting two-day bootcamp where we'll unravel the secrets of web networking, development, and dive into the endless possibilities of this vibrant field.</li>
+					        <li><strong>Date and Time:</strong> 17/2 Saturday (Evening 7pm - 9pm) & 18/2 Sunday (Evening:7pm - 9pm)</li>
 					        <li><strong>Duration:</strong>2 Hours</li>
 					        <li><strong>Topics to be Covered:</strong></li>
 					        <ul>
 					        	<li>
-					        		Day 1:- (10/2 Saturday)
+					        		Day 1:- (17/2 Saturday)
 					        		<ol>
-					        			<li>HTML Interview Questions</li>
-					        			<li>CSS Interview Questions</li>					        			
-					        			<li>JS Interview Questions</li>
-					        			<li>Projects based Interview Questions</li>
+					        			<li>Web Development fundamentals</li>
+					        			<li>Introduction to web Networking</li>					        			
+					        			<li>HTML Basics to Intermediate</li>
+					        			<li>Semantic HTML</li>
+					        		</ol>
+					        	</li>
+					        	<li>
+					        		Day 1:- (18/2 Saturday)
+					        		<ol>
+					        			<li>Day - 1 Recap</li>
+					        			<li>CSS Basics to Intermediate</li>					        			
+					        			<li>CSS Libraries</li>
+					        			<li>Hands-on exercises</li>
 					        		</ol>
 					        	</li>
 						    </ul>
 					        
 					        <h2>For more information visit our website</h2>
-					        <a href="https://21skills.vercel.app"><button class="button">21st Skills</button></a>
+					        <a href="https://21skills.com"><button class="button">21st Skills</button></a>
 					    </ul>
 					    <h2><strong>Requirements:</strong></h2>
 				    	<ol>
