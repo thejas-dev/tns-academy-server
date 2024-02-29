@@ -27,11 +27,7 @@ let transporter = nodemailer.createTransport({
 });
 
 const temp = [
-{
-	name:"Thejas Hari",
-	email:"thejaskala308@gmail.com"
-},
-
+  {"name":"Logesh R","email":"logiravi15@gmail.com"}
 ]
 
 
@@ -48,7 +44,7 @@ const sendMail = async (name,email) => {
         address:'21stskills.com@gmail.com'
       },
       to: email,
-      subject: `Congratulations!`,
+      subject: `Congratulations on completing 2-days web development bootcamp!`,
       html: `
 				<!DOCTYPE html>
 					<html lang="en">
@@ -98,27 +94,27 @@ const sendMail = async (name,email) => {
 
 					<body>
 					  <div class="container">
-					    <h1>Thank You for Your Participation in Hands-on Linux Basics and Bash Scripting Workshop!</h1>
+					    <h1>Thank You for Your Participation in 2 days bootcamp on web development!</h1>
 
 					    <p>Hello ${name},</p>
 
 					    <p>Here are some highlights from this workshop:</p>
 					    <ul>
-					      <li>Operating System Fundamentals</li>
-					      <li>Linux Basic Commands, Networking Commands, Advanced Commands</li>
-					      <li>Bash Scripting</li>
-					      <li>Hands-on Bash Scripting Projects</li>
+					      <li>Web Development Fundamentals</li>
+					      <li>Web Networking fundamentails</li>
+					      <li>HTML Basics to Intermediate</li>
+					      <li>CSS Basics to Intermediate</li>
 					    </ul>
 
-					    <p>The PowerPoint presentations and source code for the hands-on projects are included in this email for your reference. <a target="_blank" href="https://docs.google.com/presentation/d/1_9z6E05COSE7NG3hWG-1AFAz3L8iah4pmb-NmNi15B4/edit#slide=id.g2b6382c5a66_0_0">https://docs.google.com/presentation/d/1_9z6E05COSE7NG3hWG-1AFAz3L8iah4pmb-NmNi15B4/edit#slide=id.g2b6382c5a66_0_0</a> <p>
+					    <p>The PowerPoint presentations and source code for the hands-on projects are included in this email for your reference. <a target="_blank" href="https://docs.google.com/presentation/d/1aFLeEwemM9qtuzSHju-oucCcofYGSZ4_pCPAlSupVJs/edit?usp=sharing">https://docs.google.com/presentation/d/1aFLeEwemM9qtuzSHju-oucCcofYGSZ4_pCPAlSupVJs/edit?usp=sharing</a> <p>
 
 					    <p>We appreciate your participation. As a token of acknowledgment, we are pleased to provide you with a participation certificate.</p>
 
 					    <p>You can download your certificate by clicking on the following link:</p>
 
-					    <a class="cta-button" href="https://workshop-certificates.vercel.app/543534534/${name}.png" target="_blank" download>Download Certificate</a>
+					    <a class="cta-button" href="https://workshop-certificates.vercel.app/102919/${name}.png" target="_blank">Download Certificate</a>
 
-					    <p>Feel free to explore more opportunities for learning and skill development. Check out our website for upcoming workshops and courses: <a href="https://21stskills.vercel.app" target="_blank">https://21stskills.vercel.app</a></p>
+					    <p>Feel free to explore more opportunities for learning and skill development. Check out our website for upcoming workshops and courses: <a href="https://21stskills.com" target="_blank">https://21stskills.com</a></p>
 
 
 					    <p>Best regards,<br>

@@ -27,11 +27,7 @@ let transporter = nodemailer.createTransport({
 });
 
 const temp = [
-{
-	name:"Thejas hari",
-	email:"thejaskala308@gmail.com"
-},
-
+ 
 ]
 
 
@@ -48,7 +44,7 @@ const sendMail = async (name,email) => {
         address:'21stskills.com@gmail.com'
       },
       to: email,
-      subject: `Frontend Interview Workshop Started! 🚀`,
+      subject: `Reminder: Day-2 of 2-days Web Development Bootcamp is starting today!`,
       html: `
 				<!DOCTYPE html>
 					<html lang="en">
@@ -101,22 +97,23 @@ const sendMail = async (name,email) => {
 					<body>
 					    <div class="container">
 					        <img class="banner" src="https://21stskills.vercel.app/frontend-workshop" alt="Workshop Banner">
-					        <h1>Reminder: Your Registered Frontend Interview Preparation Workshop Has Started! 🌟</h1>
+					        <h1>Reminder: 2nd day of your Registered 2-days bootcamp on web development was starting soon! 🌟</h1>
 					        <p>Hello ${name},</p>
-					        <p>We hope this message finds you well. Just a friendly reminder that the "Frontend Interview Preparation Workshop" is Started!</p>
-					        <p><strong>Workshop Details:</strong></p>
+					        <p>We hope this message finds you well. Just a friendly reminder that day-2 of "2-days Web Development Bootcamp" which is starting at 7pm today!</p>
+					        <p><strong>Bootcamp Details:</strong></p>
 					        <ul>
-					            <li><strong>Title:</strong> Frontend Interview Preparation Workshop</li>
-					            <li><strong>Date:</strong> 10/2/2024</li>
+					            <li><strong>Title:</strong> 2-days Web Development Bootcamp</li>
+					            <li><strong>Date:</strong> 17/2/2024, 18/2/2024</li>
 					            <li><strong>Timing:</strong> 7:00 PM - 9:00 PM</li>
-					            <li><strong>Google Meet Link:</strong> <a href="https://meet.google.com/fia-fego-knm">https://meet.google.com/fia-fego-knm</a></li>
+					            <li><strong>Google Meet Link:</strong> <a href="https://meet.google.com/pch-smcr-jih">https://meet.google.com/pch-smcr-jih</a></li>
 					        </ul>
-					        <a href="https://meet.google.com/fia-fego-knm" class="cta-button">Join Workshop</a>
+					        <a href="https://meet.google.com/pch-smcr-jih" class="cta-button">Join Workshop</a>
 					        <p>If you have any questions or need assistance, feel free to reach out.</p>
 					        
 					        <p>Best regards,</p>
 					        <p>N.U.Thejas hari</p>
 					        <p>Founder, 21st Skills</p>
+					        <a href="https://linkedin.com/in/thejashari">Linkedin</a>
 					    </div>
 					</body>
 					</html>
@@ -134,7 +131,7 @@ const sendMail = async (name,email) => {
 } 
 
 for (let i = 0; i<temp.length; i++){
-	// sendMail(temp[i].name,temp[i].email) 
+	sendMail(temp[i].name,temp[i].email) 
 	// console.log(temp[i].name,temp[i].email)
 }
 
@@ -183,7 +180,7 @@ const diffUsers = async() => {
 // diffUsers()
 
 const fetchUsers = async() => {
-	const {data} = await axios.post('http://localhost:3333/api/auth/getWorkshop/65c4ec315a6594a5ea09b47f')
+	const {data} = await axios.post('http://localhost:3333/api/auth/getWorkshop/65cb91193c3df9bcecfa8446')
 	console.log(data.obj[0]?.registeredParticipants)
 	const registeredParticipants = data.obj[0]?.registeredParticipants;
 	console.log(registeredParticipants.length)
