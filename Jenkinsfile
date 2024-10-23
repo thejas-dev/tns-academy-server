@@ -20,9 +20,6 @@ pipeline {
         }
         success{
             echo 'This will show only if it success'
-            mail to: 'thejaskala308@gmail.com',
-             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-             body: "Something is wrong with ${env.BUILD_URL}"
         }
         failure {
             echo 'This will run only if it failed'
