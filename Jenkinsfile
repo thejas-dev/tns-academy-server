@@ -13,7 +13,7 @@ pipeline {
                 '''
             }
         }
-        stage('Deploy - Staging') {
+        stage('Deploy - 1') {
             steps {
                 echo 'From Deployment Staging Step'
             }
@@ -23,7 +23,7 @@ pipeline {
                 input 'Does the staging environment okay?'
             }
         }
-        stage('Deploy - Production') {
+        stage('Deploy - 2') {
             steps {
                 echo 'From Deployment Production Step'
             }
