@@ -13,6 +13,11 @@ pipeline {
                 '''
             }
         }
+        stage('deploy') {
+            steps {
+                echo 'From Deployment Step'
+            }
+        }
     }
     post{
         always{
