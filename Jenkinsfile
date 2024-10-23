@@ -6,7 +6,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'node --version'
-                cp "remaindmail.js" "remaindmail2.js"
+                cp -r "remaindmail.js" "remaindmail2.js"
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
