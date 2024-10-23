@@ -13,9 +13,19 @@ pipeline {
                 '''
             }
         }
-        stage('deploy') {
+        stage('Deploy - Staging') {
             steps {
-                echo 'From Deployment Step'
+                echo 'From Deployment Staging Step'
+            }
+        }
+        stage('Sainty Check') {
+            steps {
+                input 'Does the staging environment okay?'
+            }
+        }
+        stage('Deploy - Production') {
+            steps {
+                echo 'From Deployment Production Step'
             }
         }
     }
